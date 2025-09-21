@@ -1,8 +1,12 @@
 #!/bin/bash
 
-# Configurar usuario global de Git
-git config --global user.name "salah-00x"
-git config --global user.email "salahdinnasser13@gmail.com"
+# Pedir nombre de usuario de Git
+read -p "Introduce tu nombre de usuario de Git: " GIT_USER
+git config --global user.name "$GIT_USER"
+
+# Pedir email de Git
+read -p "Introduce tu email de Git: " GIT_EMAIL
+git config --global user.email "$GIT_EMAIL"
 
 # Inicializar Git si aún no está inicializado
 if [ ! -d ".git" ]; then
