@@ -1,25 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styleAp.css">
+</head>
+<body>
+    
+</body>
+</html>
+
 <?php
-$name = "Salah";
-$age = 20;
 
-var_dump($name);
-var_dump($age);
-echo gettype($name);
+$nombre = "salah";
+$apellidos = "Nasser El aslani";
+$edad = 20;
+$direccion = "Pasaje de Teba, Norte 18011";
+?>
+<div class="div">
+    <?php
+    echo "Hola me llamo " . $nombre . " " . $apellidos . ", tengo " . $edad . " años y 
+    vivo en " . $direccion . PHP_EOL;
+    ?>
+</div>
 
-$output = "Hola $name. Tienes $age años";
-$frase = "el tipo de variable $name es ". gettype($name);
-echo $frase;
+<?php
+$output;
 
+if ($edad < 18){
+     $output = $nombre . " es menor de edad";
+}else if ($edad >= 18 && $edad <=30){
+    $output = $nombre . " estas en tu prime";
+}else{
+    $output = $nombre . " estas en la ruina";
+}
 
-define("PI", 3.14); //para las constantes
-const NOMBRE = "Salah";
-$isOld = $age >= 18;
+echo PHP_EOL . $output;
 
 ?>
-
-<h2>
-    <?= $output ?>
-</h2>
-<h2>
-    <?= $frase ?>
-</h2>

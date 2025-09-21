@@ -8,7 +8,7 @@ if(!isset($_GET['logout'])){
 
 //arrays de usuarios y contraseñas
 $users["admin"] = "123";
-$users["pepe"] = "pepe12";
+$users["ayman"] = "ayman";
 $users["salah"] = "salah";
 
 $error = 0;
@@ -47,7 +47,7 @@ if(isset($_POST['login'])){ //si existe el campo login dentro del formulario
 <body>
     <?php
 
-    if(!$_SESSION['login']){ //si login esta vacio login = 0
+    if(!$_SESSION['login']){ //si login esta vacio login = 0 | si no hay sesion o login
 
 
     ?>
@@ -67,7 +67,6 @@ if(isset($_POST['login'])){ //si existe el campo login dentro del formulario
                 echo "<h2>Bienvenido. Has iniciado sesión</h2>".$user;
             
             }
-
 
         if($error){
             echo "error ".$error;
